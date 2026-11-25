@@ -73,6 +73,7 @@ const courses = [
   }
 ];
 
+app.use(cors());
 
 app.get('/courses', (req,res)=> {
     res.json(courses);
@@ -82,7 +83,6 @@ app.get('/', (req,res) =>{
     res.send("Response to the server");
 });
 
-app.use(cors());
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on the port ${process.env.PORT}`);
